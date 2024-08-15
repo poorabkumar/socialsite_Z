@@ -52,6 +52,11 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
+// Root route for testing
+app.get('/', (req, res) => {
+  res.send('Server is running');
+});
+
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;
 mongoose
